@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Virtual CD Player</title>
+    <script src="https://unpkg.com/webamp@1.5.0/byo/index.bundle.js"></script>
+    <style>
+        body {
+            background-color: #111;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        #app {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app"></div>
+
+    <script>
+        const Webamp = window.Webamp;
+        const webamp = new Webamp({
+            initialSkin: {
+                url: "The_Simple_v2.wsz"
+            },
+            initialTracks: [
+                {
+                    metaData: { title: "As It Was", artist: "Harry Styles" },
+                    url: "As It Was .mp3",
+                    duration: 167
+                },
+                {
+                    metaData: { title: "Get Up", artist: "NewJeans" },
+                    url: "Get Up.mp3",
+                    duration: 36
+                },
+                {
+                    metaData: { title: "Bubble Gum", artist: "NewJeans" },
+                    url: "Bubble Gum.mp3",
+                    duration: 200
+                },
+                {
+                    metaData: { title: "Supernatural", artist: "NewJeans" },
+                    url: "Supernatural.mp3",
+                    duration: 192
+                },
+                {
+                    metaData: { title: "Hype Boy", artist: "NewJeans" },
+                    url: "Hype Boy.mp3",
+                    duration: 179
+                },
+                {
+                    metaData: { title: "Sex, Drugs, Etc.", artist: "Beach Weather" },
+                    url: "Sex, Drugs, Etc. .mp3",
+                    duration: 196
+                },
+                {
+                    metaData: { title: "Love Me Not", artist: "Ravyn Lenae" },
+                    url: "Love Me Not .mp3",
+                    duration: 194
+                },
+                {
+                    metaData: { title: "Sweater Weather", artist: "The Neighbourhood" },
+                    url: "Sweater Weather .mp3",
+                    duration: 240
+                },
+                {
+                    metaData: { title: "Cruel Summer", artist: "Taylor Swift" },
+                    url: "Cruel Summer .mp3",
+                    duration: 178
+                },
+                {
+                    metaData: { title: "There's Nothing Holdin' Me Back", artist: "Shawn Mendes" },
+                    url: "There's Nothing Holdin' Me Back .mp3",
+                    duration: 199
+                },
+                {
+                    metaData: { title: "Super Shy", artist: "NewJeans" },
+                    url: "Super Shy .mp3",
+                    duration: 154
+                },
+                {
+                    metaData: { title: "Gameboy", artist: "KATSEYE" },
+                    url: "Gameboy .mp3",
+                    duration: 190
+                },
+                {
+                    metaData: { title: "Dancing Queen", artist: "ABBA" },
+                    url: "Dancing Queen .mp3",
+                    duration: 232
+                },
+                {
+                    metaData: { title: "Honeypie", artist: "JAWNY" },
+                    url: "Honeypie .mp3",
+                    duration: 142
+                }
+            ],
+        });
+
+        webamp.renderWhenReady(document.getElementById('app'));
+    </script>
+</body>
+</html>
