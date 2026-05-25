@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SICK Music Player</title>
-    <script src="https://unpkg.com/webamp@1.5.0/byo/index.bundle.js"></script>
+    <meta charset="utf-8">
+    <title>Music Player</title>
     <style>
         body {
             background-color: #111;
             margin: 0;
-            padding: 0;
             height: 100vh;
-            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             overflow: hidden;
         }
-        #webamp-container {
-            position: absolute;
-            top: 0;
-            left: 0;
+        #app {
             width: 100%;
             height: 100%;
-            z-index: 9999;
         }
     </style>
 </head>
 <body>
 
-    <div id="webamp-container"></div>
+    <div id="app"></div>
 
+    <script src="https://unpkg.com/webamp@1.4.2/built/webamp.bundle.min.js"></script>
+    
     <script>
         const Webamp = window.Webamp;
         const webamp = new Webamp({
@@ -39,7 +38,7 @@
                 { metaData: { title: "Supernatural", artist: "NewJeans" }, url: "./Supernatural.mp3" },
                 { metaData: { title: "Hype Boy", artist: "NewJeans" }, url: "./Hype Boy.mp3" },
                 { metaData: { title: "Sex, Drugs, Etc.", artist: "Beach Weather" }, url: "./Sex, Drugs, Etc. .mp3" },
-                { metaData: { title: "Love Me Not", artist: "Raevyn Leane" }, url: "./Love Me Not .mp3" },
+                { metaData: { title: "Love Me Not", artist: "Rayven Lenae" }, url: "./Love Me Not .mp3" },
                 { metaData: { title: "Sweater Weather", artist: "The Neighbourhood" }, url: "./Sweater Weather .mp3" },
                 { metaData: { title: "Cruel Summer", artist: "Taylor Swift" }, url: "./Cruel Summer .mp3" },
                 { metaData: { title: "There's Nothing Holdin' Me Back", artist: "Shawn Mendes" }, url: "./There's Nothing Holdin' Me Back .mp3" },
@@ -50,8 +49,7 @@
             ],
         });
 
-        // Tells the script exactly where to build the player window
-        webamp.renderWhenReady(document.getElementById('webamp-container'));
+        webamp.renderWhenReady(document.getElementById('app'));
     </script>
 </body>
 </html>
